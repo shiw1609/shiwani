@@ -1,0 +1,33 @@
+<p>employee-list works!</p>
+<!---<div *ngFor="let e of emplist">
+    {{e.id}}
+    {{e.name}}
+    {{e.username}}
+    {{e.password}}
+</div>--->
+<div class="container">
+    <table class="table table-striped">
+      <tbody>
+        <th>ID</th>
+        <th>NAME</th>
+        <TH>USERNAME</TH>
+        <TH>PASSWORD</TH>
+        <TH>EDIT</TH>
+        <TH>DELETE</TH>
+        <tr *ngFor="let e of emplist">
+          <td>{{e.id}}</td>
+          <td>{{e.name}}</td>
+          <td>{{e.username}}</td>
+          <td>{{e.password}}</td>
+         <td><a class="btn" (click)="editData(e)">
+              <i class="fa fa-edit"></i>
+            </a>
+          </td>
+          <td><a class="btn" (click)="deletedata(e.id)">
+              <i class="fa fa-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
